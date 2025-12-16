@@ -25,14 +25,3 @@
 "<=" return LE;
 ">"  return GT;
 "<"  return LT;
-
-"+"|"-"|"*"|"/"|"="|"("|")"|";"|","|"." return yytext[0];
-
-"#".*           ;
-[ \t\n]+        ;
-
-.               { printf("Caracter invalido: %s\n", yytext); }
-
-%%
-
-int yywrap() { return 1; }
